@@ -1,24 +1,37 @@
 {
-    "name": "wvbforum/limit-search",
-    "description": "Limit Flarum Search Requests.",
-    "type": "flarum-extension",
-    "require": {
-        "flarum/core": "^0.1.0@dev"
+  "name": "wvbforum/limit-search",
+  "description": "Limit flarum search requests",
+  "keywords": [
+    "flarum"
+  ],
+  "type": "flarum-extension",
+  "license": "MIT",
+  "require": {
+    "flarum/core": "^0.1.0-beta.8"
+  },
+  "authors": [
+    {
+      "name": "2006bt",
+      "email": "m2006bt@outlook.com",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "WvbForum\\LimitSearch\\": "src/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "Limit Search",
+      "icon": {
+        "name": "",
+        "backgroundColor": "",
+        "color": ""
+      }
     },
-    "require-dev": {
-        "flarum/core": "^0.1.0@dev"
-    },
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "2006bt",
-            "email": "m2006bt@outlook.com"
-        }
-    ],
-    "autoload": {
-        "psr-4": {
-            "wvbforum\\limit-search\\": "src/"
-        }
-    },
-    "minimum-stability": "dev"
+    "flagrow": {
+      "discuss": ""
+    }
+  }
 }
