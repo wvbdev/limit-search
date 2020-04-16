@@ -1,3 +1,3 @@
-app.initializers.add('WvbForum/butler', () => {
-  console.log('[WvbForum/butler] Hello, forum!');
+app.initializers.add('wvbforum/limit-search', () => {
+  console.log('[WvbForum/limit-search] Hello, forum!');
 });

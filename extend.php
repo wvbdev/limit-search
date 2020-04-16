@@ -14,9 +14,10 @@ namespace WvbForum\LimitSearch;
 use Flarum\Extend;
 use Illuminate\Contracts\Events\Dispatcher;
 use Flarum\Frontend\Document;
+use WvbForum\LimitSearch\Listener;
 
 return [
-    
+
     (new Extend\Frontend('forum'))
         ->content(function (Document $document) {
             $document->head[] = '<script>console.log("Horld!")</script>';
@@ -27,6 +28,7 @@ return [
         ->js(__DIR__.'/js/dist/admin.js'),
 
     function (Dispatcher $events) {
-        //$events->subscribe(SuspendUserAfterRegistration::class);
+        $events->subscribe(Listener\CheckCountAfterUserSearching::class);
+        $events->subscribe(Listener\CheckCountAfterDiscussionSearching::class);
     }
 ];
